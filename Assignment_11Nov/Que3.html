@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .cont {
+        width: 310px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+        border-radius: 12px;
+        height: 400px;
+        padding: 20px;
+      }
+      .container {
+        display: grid;
+        grid-template-columns: repeat(4, 60px);
+        grid-template-rows: 60px repeat(4, 60px);
+        justify-content: center;
+        column-gap: 10px;
+        row-gap: 10px;
+      }
+
+      .display {
+        grid-column: 1 / span 4;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+        height: 50px;
+        margin-top: 20px;
+      }
+
+      .btn:nth-child(5),
+      .btn:nth-child(9),
+      .btn:nth-child(13),
+      .btn:nth-child(16),
+      .btn:nth-child(17) {
+        background-color: black;
+        color: white;
+      }
+      .btn:nth-child(14) {
+        background-color: red;
+        color: white;
+      }
+
+      .btn {
+        height: 60px;
+        font-size: 24px;
+        font-weight: bold;
+        text-align: center;
+        box-shadow: 2px 2px 5px grey;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
+        border-radius: 12px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="cont">
+      <div class="container">
+        <div class="display"></div>
+        <div class="btn">1</div>
+        <div class="btn">2</div>
+        <div class="btn">3</div>
+        <div class="btn">+</div>
+        <div class="btn">4</div>
+        <div class="btn">5</div>
+        <div class="btn">6</div>
+        <div class="btn">-</div>
+        <div class="btn">7</div>
+        <div class="btn">8</div>
+        <div class="btn">9</div>
+        <div class="btn">*</div>
+        <div class="btn">C</div>
+        <div class="btn">0</div>
+        <div class="btn">=</div>
+        <div class="btn">/</div>
+      </div>
+    </div>
+  </body>
+</html>
