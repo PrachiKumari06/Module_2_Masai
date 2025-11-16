@@ -12,6 +12,7 @@
             align-items: center;
             padding: 10px 20px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            flex-wrap: wrap;
         }
     
         #navbar h1 {
@@ -21,7 +22,8 @@
     
         .header {
             display: flex;
-            gap: 26px;
+            gap: 20px;
+            flex-wrap: wrap;
         }
     
         .header p {
@@ -106,15 +108,87 @@
             font-size: 14px;
         }
          /* Explore section end */ 
-     .bottom-section{
-        display: flex;
-        background-color: lightgrey;
-     }
-     .info2{
-        display: flex;
-flex-direction: column;
-margin-left: 120px;        
-     }
+    .bottom-section {
+    display: flex;
+    justify-content: center;
+    background-color: lightgrey;
+    padding: 40px;
+    gap: 60px;   
+}
+
+.bottom-section > img {
+    width: 250px; 
+}
+
+.info2 {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;  
+}
+
+.info2 h1 {
+    margin: 0 0 10px 0;
+}
+
+.info2 p {
+    margin: 0 0 20px 0;
+}
+.img1 {
+    display: flex;
+    align-items: center;
+    gap: 15px;  
+}
+
+.img1 img {
+    width: 140px;
+    height: auto;
+}
+@media screen and (max-width:600px){
+#navbar{
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+ }
+.header{
+  flex-direction: column;
+  gap: 10px;
+}
+#navbar>button{
+  width: 100%;
+  align-items: center;
+}
+.top-section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.explore-section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.bottom-section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .bottom-section img {
+        width: 150px;
+    }
+
+    .info2 {
+        align-items: center;
+    }
+
+    .img1 {
+        justify-content: center;
+    }
+}
+
+
     </style>
 </head>
 <body>
@@ -263,7 +337,7 @@ margin-left: 120px;
              <!-- /* Explore section end */ -->
              <!-- /* Bottom section start */ -->
 <div class="bottom-section">
-<img src="https://www.dominos.co.in/assets/new_app_img@2x.png" alt="TimeOut Img not Shown">
+<img src="https://coding-platform.s3.amazonaws.com/dev/lms/tickets/48f2fc25-38f4-4d25-a878-78f15988b371/kXSpyg2iCHrCEljP.png" alt="TimeOut Img not Shown">
 <div class="info2">
     <h1>Unlock Exclusive Offers</h1>
     <p>For lighting fast ordering experience download Dominos app</p>
