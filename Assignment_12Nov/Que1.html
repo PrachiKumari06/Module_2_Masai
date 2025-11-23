@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: lightyellow;
+        padding: 40px;
+        display: flex;
+        justify-content: center;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(3, 350px);
+        grid-template-rows: repeat(3, 180px);
+        justify-content: center;
+        gap: 40px;
+      }
+      .card {
+        box-shadow: 2px 2px 10px grey;
+        border-radius: 10px;
+        padding: 10px;
+        background-color: white;
+      }
+      .card-top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+      }
+      .price {
+        color: goldenrod;
+      }
+      h3 {
+        font-size: 24px;
+        font-weight: bolder;
+      }
+      .price {
+        font-size: 24px;
+        font-weight: bolder;
+      }
+
+      @media screen and (max-width: 1024px) and (min-width: 601px) {
+        .grid {
+          grid-template-columns: repeat(2, 300px);
+          gap: 10px;
+        }
+      }
+      @media screen and (max-width: 600px) {
+        .grid {
+          grid-template-columns: repeat(1, 350px);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid">
+      <div class="card">
+        <div class="card-top">
+          <h3 class="title">Cappuccino</h3>
+          <div class="price">$49</div>
+        </div>
+        <p class="desc">
+          Usage of the Internet is becoming more common due to rapid advance.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="card-top">
+          <h3 class="title">Americano</h3>
+          <div class="price">$49</div>
+        </div>
+        <p class="desc">
+          Usage of the Internet is becoming more common due to rapid advance.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="card-top">
+          <h3 class="title">Espresso</h3>
+          <div class="price">$49</div>
+        </div>
+        <p class="desc">
+          Usage of the Internet is becoming more common due to rapid advance.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="card-top">
+          <h3 class="title">Macchiato</h3>
+          <div class="price">$49</div>
+        </div>
+        <p class="desc">
+          Usage of the Internet is becoming more common due to rapid advance.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="card-top">
+          <h3 class="title">Mocha</h3>
+          <div class="price">$49</div>
+        </div>
+        <p class="desc">
+          Usage of the Internet is becoming more common due to rapid advance.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="card-top">
+          <h3 class="title">Coffee Latte</h3>
+          <div class="price">$49</div>
+        </div>
+        <p class="desc">
+          Usage of the Internet is becoming more common due to rapid advance.
+        </p>
+      </div>
+      <div class="card">
+        <div class="card-top">
+          <h3 class="title">Piccolo Latte</h3>
+          <div class="price">$49</div>
+        </div>
+        <p class="desc">
+          Usage of the Internet is becoming more common due to rapid advance.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="card-top">
+          <h3 class="title">Ristretto</h3>
+          <div class="price">$49</div>
+        </div>
+        <p class="desc">
+          Usage of the Internet is becoming more common due to rapid advance.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="card-top">
+          <h3 class="title">Affogato</h3>
+          <div class="price">$49</div>
+        </div>
+        <p class="desc">
+          Usage of the Internet is becoming more common due to rapid advance.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
