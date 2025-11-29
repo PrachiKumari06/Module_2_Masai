@@ -1,31 +1,35 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
-
-    <h1 id="hi">Hello, I am Prachi</h1>
+   <h1 id="hi">Hello, I am Prachi</h1>
 
     <p>This is paragraph one</p>
     <p>This is paragraph two</p>
     <p>This is paragraph three</p>
+
     <div class="container">
         This is a container div
     </div>
 
     <script>
-       let hi1 = document.getElementById("hi");
+        // Change heading text
+        let hi1 = document.getElementById("hi");
         hi1.textContent = "Welcome to the DOM World!";
 
+        // Change all paragraph colors
         let para = document.getElementsByTagName("p");
         for (let i = 0; i < para.length; i++) {
             para[i].style.color = "blue";
         }
 
+        // Change container background
         const box = document.querySelector(".container");
         box.style.backgroundColor = "yellow";
-    </script>
-
+    </script> 
 </body>
 </html>
