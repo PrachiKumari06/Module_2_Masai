@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  Name: <input type="text" id="username" placeholder="Enter Your Name"> <br><br>
+ Password:   <input type="password" id="password" placeholder="Enter password">
+ <button onclick="login()">Login</button>
+
+ <p id="msg"></p>
+
+ <script>
+   function login(){
+    let u=document.getElementById("username").value;
+    let p=document.getElementById("password").value;
+   if (u === "" || p === "") {
+        document.getElementById("msg").innerText = "Please fill all fields.";
+        return;
+      }
+    else{
+        localStorage.setItem("logged in user",u,p);
+        // sessionStorage.setItem("logged in user",u);
+            window.location.href="dashboard.html";
+
+    }
+   } 
+ </script>
+</body>
+</html>

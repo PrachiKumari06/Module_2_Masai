@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+ <div class="div1">
+<h1 id="hi">Hi Everyone</h1>
+<h2 class="h12">I am Prachi</h2>
+<h2 class="h12">I am Btech Student</h2>
+<p>I am currently in 3rd year</p>
+<button onclick="changetext()">change text</button>
+ </div> 
+ <button ondblclick="hideShow()">Toggle Div</button>
+<script >
+console.log(document);
+  document.body.style.background="yellow";
+  document.getElementById("hi").style.background="green";
+document.querySelector("p").style.background = "purple";
+
+function changetext(){
+    // document.getElementById("hi").innerHTML="Hi Guys This Is My Profile";
+    //for toggle:
+    let h=document.getElementById("hi");
+    h.innerHTML=h.innerHTML==="Hi Everyone"?"Hi Guys This Is My Profile"
+      : "Hi Everyone";
+}
+
+function hideShow(){
+    //for div 
+ let box=document.getElementsByClassName("div1")[0];
+   box.style.visibility =
+      box.style.visibility === "hidden" ? "visible" : "hidden";
+    //for body
+    let b=document.body;
+    b.style.background= b.style.background==="pink"?"yellow":"pink";
+}
+
+</script>
+</body>
+</html>
