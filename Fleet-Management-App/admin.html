@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="admin.css" />
+  </head>
+  <body>
+    <!--Sidebaar start  -->
+    <div id="sidebar">
+      <h3>Add Fleet</h3>
+      <input
+        type="text"
+        id="reg"
+        placeholder="Registration Vehicle No."
+      /><br /><br />
+      <select id="category">
+        <option value="" disabled selected>Select Vehicle Type</option>
+        <option value="Truck">Truck</option>
+        <option value="Bus">Bus</option>
+        <option value="Car">Car</option>
+      </select>
+      <br /><br />
+      <input type="text" id="driver" placeholder="Driver Name" /><br />
+      <select id="avail">
+        <option value="" disabled selected>Select Vehicle Status</option>
+        <option value="Available">Available</option>
+        <option value="Unavailable">Unavailable</option>
+      </select>
+      <br /><br />
+      <button onclick="addFleet()">Add Fleet</button>
+    </div>
+    <!--Sidebaar end  -->
+    <!--Navbar start  -->
+    <div id="main">
+      <div>
+        <select id="filterCategory" onchange="applyfilter()">
+          <option value="All">All</option>
+          <option value="Truck">Truck</option>
+          <option value="Bus">Bus</option>
+          <option value="Car">Car</option>
+        </select>
+
+        <select id="filterAvail">
+          <option value="All">All</option>
+          <option value="Available">Available</option>
+          <option value="Unavailable">Unavailable</option>
+        </select>
+        <button onclick="clearFilter()">Clear Filter</button>
+      </div>
+      <h2>Fleet List</h2>
+      <div id="cards"></div>
+    </div>
+    <!--Navbar end  -->
+
+    <script src="admin.js"></script>
+  </body>
+</html>

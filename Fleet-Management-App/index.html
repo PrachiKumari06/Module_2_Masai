@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ <div id="login">
+    <h2>Admin Login Here!</h2>
+   <input type="email" id="email" placeholder="Enter Email"><br>
+   <input type="password" id="password" placeholder="Enter Password"><br>
+    <button onclick="login()">Login</button>
+ </div>
+    <script>
+        function login(){
+            let email = document.getElementById("email").value;
+            let password = document.getElementById("password").value;
+    
+            if(email === "admin@gmail.com" && password === "admin1234"){
+                alert("Login Successful");
+                window.location.href = "admin.html"; // Redirect to dashboard
+            } else {
+                alert("Wrong email or password");
+            }  
+        }
+    </script>
+</body>
+</html>
