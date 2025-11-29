@@ -67,7 +67,7 @@ function applyfilter(){
     let avail=document.getElementById("filterAvail").value;
     let filtered=data.filter(item=>{
         let matchCat=(cat==="All") || (item.category===cat);
-        let matchAvail=avail==="All" || item.avail===avail;
+        let matchAvail=avail==="All" || (avail=="Available" && item.avail===true) || (avail=="Unavailable" && item.avail===false)  ;
     return matchAvail && matchCat;
     })
     render(filtered);
