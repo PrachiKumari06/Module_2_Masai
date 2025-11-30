@@ -17,17 +17,14 @@
     </div>
 
     <script>
-        // Change heading text
         let hi1 = document.getElementById("hi");
         hi1.textContent = "Welcome to the DOM World!";
 
-        // Change all paragraph colors
         let para = document.getElementsByTagName("p");
         for (let i = 0; i < para.length; i++) {
             para[i].style.color = "blue";
         }
 
-        // Change container background
         const box = document.querySelector(".container");
         box.style.backgroundColor = "yellow";
     </script> 

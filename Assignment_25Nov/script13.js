@@ -10,7 +10,7 @@ bgBtn.onclick = function () {
     box.style.backgroundColor = color;
 
     if (box.style.backgroundColor === "") {
-        alert("Invalid color name!");
+        alert("Invalid color name");
     }
 };
 
