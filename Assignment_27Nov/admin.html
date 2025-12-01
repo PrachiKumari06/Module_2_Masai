@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link  rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>List Of The Books !</h2>
+
+    <div class="container">
+        Title:<input type="text" id="title" placeholder="Enter The Book Name"><br><br>
+        Author: <input type="text" id="author" placeholder="Enter The Author Name"> <br><br>
+        Category: 
+        <select id="category">
+            <option value="">Select Category</option>
+            <option value="fiction">Fiction</option>
+            <option value="comedy">Comedy</option>
+            <option value="technical">Technical</option>
+        </select> <br><br>
+        <button onclick="addbook()">Add Book</button>
+    </div>
+
+    <div class="container1">
+        <button onclick="sortAZ()">Sort A→Z</button>
+        <button onclick="sortZA()">Sort Z→A</button>
+
+        <select id="filtercate" onchange="filtercategory()">
+            <option value="">Filter by Category</option>
+            <option value="fiction">Fiction</option>
+            <option value="comedy">Comedy</option>
+            <option value="technical">Technical</option>
+        </select>
+    </div>
+
+    <div id="cards"></div>
+
+    <button class="ShowAllBtn" onclick="render(books)">Show All</button>
+    <script src="BookManagment.js"></script>
+</body>
+</html>
