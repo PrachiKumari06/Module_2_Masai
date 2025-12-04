@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h3>Todo List</h3>
+
+<input id="taskInput" placeholder="Add task">
+<button onclick="addTask()">Add</button>
+
+<br><br>
+
+<input id="search" placeholder="Search" oninput="searchTasks()">
+
+<ul id="list"></ul>
+
+<script>
+  let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+
+  function save() {
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+  }
+
+  function show(list = tasks) {
+    let ul = document.getElementById("list");
+    ul.innerHTML = "";
+
+    for (let i = 0; i < list.length; i++) {
+      let t = list[i];
+      let li = document.createElement("li");
+
+      if (t.completed === true) {
+        li.style.textDecoration = "line-through";
+      }
+
+      li.textContent = t.text;
+
+      li.onclick = function () {
+        toggle(t.id);
+      };
+
+      let del = document.createElement("button");
+      del.textContent = "Delete";
+
+      del.onclick = function () {
+        remove(t.id);
+      };
+
+      li.appendChild(del);
+      ul.appendChild(li);
+    }
+  }
+
+  function addTask() {
+    let input = document.getElementById("taskInput");
+    let text = input.value.trim();
+    if (text === "") return;
+
+    let task = {
+      id: Date.now(),
+      text: text,
+      completed: false
+    };
+
+    tasks.push(task);
+    save();
+    show();
+    input.value = "";
+  }
+
+  function toggle(id) {
+    for (let i = 0; i < tasks.length; i++) {
+      if (tasks[i].id === id) {
+        tasks[i].completed = !tasks[i].completed;
+      }
+    }
+    save();
+    show();
+  }
+
+  function remove(id) {
+    let arr = [];
+    for (let i = 0; i < tasks.length; i++) {
+      if (tasks[i].id !== id) {
+        arr.push(tasks[i]);
+      }
+    }
+    tasks = arr;
+    save();
+    show();
+  }
+
+  function searchTasks() {
+    let q = document.getElementById("search").value.toLowerCase();
+    let result = [];
+
+    for (let i = 0; i < tasks.length; i++) {
+      if (tasks[i].text.toLowerCase().includes(q)) {
+        result.push(tasks[i]);
+      }
+    }
+
+    show(result);
+  }
+
+  show();
+</script>
+
+</body>
+</html>
